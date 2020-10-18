@@ -1,0 +1,27 @@
+if errors
+  each object in errors
+    .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+      | #{object.msg}
+      button.close(type='button' data-dismiss='alert' aria-label='Close')
+        span(aria-hidden='true') &times;
+
+
+unless success_msg == ''
+  .alert.alert-success.alert-dismissible.fade.show(role='alert')
+    | #{success_msg}
+    button.close(type='button' data-dismiss='alert' aria-label='Close')
+      span(aria-hidden='true') &times;
+
+
+unless error_msg == ''
+  .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+    | #{error_msg}
+    button.close(type='button' data-dismiss='alert' aria-label='Close')
+      span(aria-hidden='true') &times;
+
+
+unless error == ''
+  .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+    | #{error}
+    button.close(type='button' data-dismiss='alert' aria-label='Close')
+      span(aria-hidden='true') &times;
